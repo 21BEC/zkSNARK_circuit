@@ -2,6 +2,7 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 // https://github.com/projectsophon/hardhat-circom
 import "hardhat-circom";
+import 'dotenv/config';
 // circuits
 import circuits = require('./circuits.config.json')
 
@@ -21,6 +22,12 @@ const config: HardhatUserConfig = {
         version: "0.6.11",
       }
     ]
+  },
+  networks: {
+    mumbai : {
+      url: 'https://rpc.ankr.com/polygon_mumbai',
+      accounts: [process.env.mumbaiprivatekey]
+    }
   },
   circom: {
     // (optional) Base path for input files, defaults to `./circuits/`
