@@ -1,0 +1,7 @@
+{
+  "a": 0,
+  "b": 1,
+  "x": 0, // Calculated by the AND gate
+  "y": 1, // Calculated by the NOT gate
+  "Q": 1  // Calculated by the OR gate
+}
